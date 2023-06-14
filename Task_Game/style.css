@@ -1,0 +1,42 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+.general {
+    width: 600px;
+    height: 500px;
+    border: 2px solid black;
+    margin: auto;
+    position: relative;
+}
+
+
+.ball {
+    width: 50px;
+    height: 50px;
+    background-color: brown;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.bar {
+    width: 100px;
+    height: 20px;
+    background-color: blueviolet;
+    border-radius: 20px;
+    position: absolute;
+    bottom: -20px;
+
+}
+.point {
+    font-size: 24px;
+    color: black;
+    font-weight: 800;
+    width: 100%;
+    margin-top: 20px;
+
+}
