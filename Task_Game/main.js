@@ -7,6 +7,9 @@ let ballY = 0;
 let ballMoveX = 5;
 let ballMoveY = 5;
 let count = 0;
+let scoreList = new Array();
+localStorage.setItem("score", JSON.stringify(scoreList));
+
 
 onkeydown = BarMove;
 
@@ -43,25 +46,33 @@ ballMoveY *= -1;
     }
     else if(ballY>450 && ballX <= barX+100 && ballX >= barX-25){
         count++;
-       
-        
-        let bestScore = localStorage.getItem("score");
-        point.innerHTML = `BEST SCORE: ${bestScore} \n SCORE: ${count}   `;
+document.querySelector('.win p span').innerHTML = `${count}`;
+   
         ballMoveX++;
         ballMoveY++;
         ballMoveY *= -1;
     }
     else if(ballY>450){
-        localStorage.setItem("score", count);
+        document.querySelector('.lose p span').innerHTML = `${count}`;
+        document.querySelector('.lose').style.display = 'block';
+   scoreList= JSON.parse(localStorage.getItem('score'));
+
+     scoreList.push(count);
+        localStorage.setItem('score',JSON.stringify(scoreList));
         
         ballMoveX = 5;
         ballMoveY = 5;
-   let isContinue =   confirm(`YOU LOST THE GAME... \n Score: ${count} \n Do you want to continue?`)
-   
-    if(isContinue){
-       
-        document.location.reload(true);
-    }
+        clearInterval(set);
+         
+        document.querySelector('button').addEventListener('click',()=> {
+            ballX =0;
+            ballY =0;
+     set = setInterval(
+    BallMove
+    , 40);
+    document.querySelector('.lose').style.display = 'none';
+        })
+  
      }
  
 
