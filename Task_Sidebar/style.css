@@ -1,0 +1,63 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.navbar {
+    padding-top: 0px;
+}
+.navbar-brand img {
+    width: 40px;
+    height: 40px;
+}
+.nav-item {
+    padding: 8px 16px;
+    float: left;
+    width: auto;
+    border: none;
+    display: block;
+    outline: 0;
+}
+.nav-item:hover {
+    background-color: #04AA6D ;
+   
+}
+.nav-item:hover a {
+    color: white;
+}
+.nav-link {
+    color: black;
+}
+.btn {
+    border-radius: 25px;
+  
+}
+
+.btn-white:hover {
+    background-color: #f1f1f1;
+}
+
+.btn-signUp {
+    position: relative;
+    z-index: 2;
+    left: 35px;
+    background-color: #04AA6D;
+    color: white;
+    font-size: 16px;
+    padding: 5px 15px 8px;
+    text-align: center;
+}
+.btn-signUp:hover {
+    background-color: #059862;
+    color: white;
+}
+.btn-logIn {
+    background-color: #D9EEE1;
+    font-size: 16px;
+    padding: 5px 15px 8px 45px;
+    text-align: center;
+}
+.btn-logIn:hover {
+    background-color: #059862;
+    color: white;
+}
