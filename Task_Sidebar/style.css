@@ -3,14 +3,19 @@
     margin: 0px;
     box-sizing: border-box;
 }
+ul{
+    list-style: none;
+    text-decoration: none;
+}
 .navbar {
     padding-top: 0px;
+    padding-bottom: 0px;
 }
 .navbar-brand img {
     width: 40px;
     height: 40px;
 }
-.nav-item {
+.navbar .nav-item {
     padding: 8px 16px;
     float: left;
     width: auto;
@@ -18,14 +23,14 @@
     display: block;
     outline: 0;
 }
-.nav-item:hover {
+.navbar .nav-item:hover {
     background-color: #04AA6D ;
    
 }
-.nav-item:hover a {
+.navbar .nav-item:hover a {
     color: white;
 }
-.nav-link {
+.navbar .nav-link {
     color: black;
 }
 .btn {
@@ -60,4 +65,61 @@
 .btn-logIn:hover {
     background-color: #059862;
     color: white;
+}
+
+.topnavbar {
+    background-color: #282A35;
+    color: #f1f1f1;
+    width: 100%;
+    letter-spacing: 1px;
+    font-size: 13px;
+
+}
+.topnavbar a:hover{
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+.leftmenuinner {
+    position: fixed;
+    top: 0;
+    padding-bottom: 0;
+    height: 100%;
+    width: 220px;
+    background-color: transparent;
+}
+#leftmenuinnerinner {
+    height: 100%;
+    width: 100%;
+    background-color: #E7E9EB;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+#sidenav h2 {
+    font-size: 21px;
+    padding-left: 16px;
+    margin: -4px 0 4px 0;
+    width: 204px;
+}
+#sidenav a {
+    font-family: "Segoe UI",Arial,sans-serif;
+    text-decoration: none;
+    display: block;
+    padding: 2px 1px 1px 16px;
+}
+#sidenav a.active {
+    background-color: #04AA6D!important;
+    color: #ffffff!important;
+
+}
+#sidenav a:hover {
+    color: #000000;
+    background-color: #cccccc;
+}
+.w3-sidebar {
+    height: 100%;
+    width: 200px;
+    background-color: #fff;
+    position: fixed!important;
+    z-index: 1;
+    overflow: auto;
 }
